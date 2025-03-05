@@ -25,7 +25,6 @@ class Language:
     @staticmethod
     def get_contact(mongo, language: str):
         cursor = mongo.db.get_collection(language)
-        configuration = cursor.find_one({"contact": "contact.html"})
+        configuration = cursor.find_one({"name": "contact.html"})
 
         return configuration
-

@@ -1,5 +1,96 @@
-<div>
-  <h2>
-    Kontakt Test
-  </h2>
+<div class="grid grid-cols-6 gap-4">
+  <div class="col-span-4 col-start-2">
+    <div class="chat chat-start">
+      <div class="chat-image avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS chat bubble component"
+            src="{{url_for('static', filename='Obi-Wan-icon.png')}}" />
+        </div>
+      </div>
+      <div class="chat-header">
+        Obi-Wan Kenobi
+        <time class="text-xs opacity-50">{{time.request}}</time>
+      </div>
+      <div class="chat-bubble">Hello, I am interested in working with you.</div>
+      <div class="chat-footer opacity-50">Delivered</div>
+    </div>
+    <div class="chat chat-end">
+      <div class="chat-image avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="portrait"
+            src="{{ url_for('static', filename='portfolio.jpg') }}" />
+        </div>
+      </div>
+      <div class="chat-header">
+        Piotr Baran
+        <time class="text-xs opacity-50">{{time.response}}</time>
+      </div>
+      <div class="chat-bubble">Hello! Can you tell me more?</div>
+      <div class="chat-footer opacity-50">Seen at {{time.response}}</div>
+    </div>
+    <div class="chat chat-start">
+      <div class="chat-image avatar">
+        <div class="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS chat bubble component"
+            src="{{url_for('static', filename='Obi-Wan-icon.png')}}" />
+        </div>
+      </div>
+      <div class="chat-header">
+        Obi-Wan Kenobi
+        <time class="text-xs opacity-50">{{time.write}}</time>
+      </div>
+      <div class="chat-bubble"><span class="loading loading-dots loading-xl"></span></div>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-7 gap-4">
+  <div class="col-span-1 md:col-span-2 md:col-start-2 justify-self-center">
+    <div class="card bg-base-100 w-96 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title">{{language_cache.form.label}}</h2>
+        <form hx-post="/send-email" hx-target="#response" hx-indicator="#indicator">
+          <fieldset class="fieldset w-88 bg-base-200 border border-base-300 p-4 rounded-box">
+
+            <label class="fieldset-label">{{language_cache.form.first_name.label}}</label>
+            <input type="text" required class="input validator" placeholder="{{language_cache.form.first_name.placeholder}}" />
+
+            <label class="fieldset-label">{{language_cache.form.last_name.label}}</label>
+            <input type="text" required class="input validator" placeholder="{{language_cache.form.last_name.placeholder}}" />
+
+            <label class="fieldset-label">{{language_cache.form.email.label}}</label>
+            <input class="input validator" type="email" required placeholder="{{language_cache.form.email.placeholder}}" />
+
+            <label class="fieldset-label">{{language_cache.form.message.label}}</label>
+            <textarea name="content" placeholder="{{language_cache.form.message.placeholder}}" required class="textarea validator"></textarea>
+            <input class="btn btn-soft btn-primary" type="submit" value="{{language_cache.form.button}}">
+          </fieldset>
+        </form>
+        <div id="response"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-span-1 md:col-start-5 justify-self-center place-self-center">
+    <div class="card bg-primary text-primary-content w-96">
+      <div class="card-body">
+        <h2 class="card-title">{{language_cache.descriptions.cooperation.title}}</h2>
+        <ul>
+          <li><p>{{language_cache.descriptions.cooperation.description}}</p></li>
+          <li class="justify-self-end"><button class="btn btn-secondary" href="mailto:kontakt@piotrbaran.me">kontakt@piotrbaran.me</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card bg-primary text-primary-content w-96 mt-4">
+      <div class="card-body">
+        <h2 class="card-title">{{language_cache.descriptions.resume.title}}</h2>
+        <ul>
+          <li><p>{{language_cache.descriptions.resume.description}}</p></li>
+          <li class="justify-self-end"><button class="btn btn-secondary justify-self-end">{{language_cache.descriptions.resume.button}}</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
