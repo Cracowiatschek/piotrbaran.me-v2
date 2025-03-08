@@ -152,7 +152,52 @@ try:
             }
         }
     }
-    pl.insert_many([base, about, contact])
+    portfolio = {
+        "name": "portfolio.html",
+        "components": {
+            "1": {
+                "name": "DictionaryApp",
+                "description": "Aplikacja służąca do przypisywania definicji sukcesu do kampanii, zgodnie ze zdefiniowaną wcześniej strukturą.",
+                "img": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377808/dictionaryAppHome_q1kkby.png",
+                "badges": "",
+                "button": {
+                    "name": "Sprawdź",
+                    "url": "/pl/portfolio?name=DictionaryApp"
+                }
+            },
+            "2": {
+                "name": "SAS Rule Engine",
+                "description": "Zestaw makr w SAS, składający się na framework, do budowy silnika regułowego.",
+                "img": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377949/rulesEngineCode_onuuhe.png",
+                "badges": "",
+                "button": {
+                    "name": "Sprawdź",
+                    "url": "/pl/portfolio?name=SAS%20Rule%20Engine"
+                }
+            },
+            "3": {
+                "name": "Praca Inżynierska",
+                "description": "Modele regresyjne do wyznaczania objętości drzew stojących na terenie miasta.",
+                "img": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378208/dataSciencePairPlot_f3wwtp.png",
+                "badges": "",
+                "button": {
+                    "name": "Sprawdź",
+                    "url": "/pl/portfolio?name=Praca%20In%C5ynierska"
+                },
+            "4": {
+                "name": "SAS Automate Notification",
+                "description": "Zestaw procedur w SAS, który umożliwia wysyłanie zestawu raportów przy pomocy email.",
+                "img": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377945/notificationCode_aocopl.png",
+                "badges": "",
+                "button": {
+                    "name": "Sprawdź",
+                    "url": "/pl/portfolio?name=SAS%20Automate%20Notification"
+                }
+            }
+            }
+        }
+    }
+    pl.insert_many([base, about, contact, portfolio])
     r = pl.find()
     print("PL")
     for i in r:
@@ -258,7 +303,52 @@ try:
             }
         }
     }
-    pl.insert_many([base, about, contact])
+    portfolio = {
+        "name": "portfolio.html",
+        "components": {
+            "1": {
+                "name": "DictionaryApp",
+                "description": "An application for assigning definitions of success to campaigns, according to a previously defined structure.",
+                "img": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377808/dictionaryAppHome_q1kkby.png",
+                "badges": "",
+                "button": {
+                    "name": "More",
+                    "url": "/en/portfolio?name=DictionaryApp"
+                }
+            },
+            "2": {
+                "name": "SAS Rule Engine",
+                "description": "A set of SAS macros that make up the framework for building a rule engine.",
+                "img": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377949/rulesEngineCode_onuuhe.png",
+                "badges": "",
+                "button": {
+                    "name": "More",
+                    "url": "/en/portfolio?name=SAS%20Rule%20Engine"
+                }
+            },
+            "3": {
+                "name": "Thesis of engineer",
+                "description": "Regression models for determining the volume of standing trees in the city.",
+                "img": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378208/dataSciencePairPlot_f3wwtp.png",
+                "badges": "",
+                "button": {
+                    "name": "More",
+                    "url": "/en/portfolio?Thesis%20of%20engineer"
+                }
+            },
+            "4": {
+                "name": "SAS Automate Notification",
+                "description": "A set of procedures in SAS that allows you to send a set of reports via email.",
+                "img": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377945/notificationCode_aocopl.png",
+                "badges": "",
+                "button": {
+                    "name": "More",
+                    "url": "/en/portfolio?SAS%20Automate%20Notification"
+                }
+            }
+        }
+    }
+    pl.insert_many([base, about, contact, portfolio])
     r = pl.find()
     print("EN")
     for i in r:

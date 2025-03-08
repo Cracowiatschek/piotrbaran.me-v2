@@ -7,3 +7,4 @@ class CacheConfig:
         configuration = cursor.find_one({"name": "base.html"})
 
         return configuration
+

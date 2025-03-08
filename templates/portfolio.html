@@ -7,67 +7,26 @@
 </div>
 <div id="tech-content" class="flex justify-center">
   <div style="margin-left: 5%; margin-right: 5%" class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2  gap-10">
-    {% if portfolio is none %}
-      <div class="card lg:card-side bg-base-100 shadow-sm">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-      alt="Album" />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">Dictionary App</h2>
-    <p class="text-wrap">Aplikacja służąca do przypisywania definicji sukcesu do kampanii, zgodnie ze zdefiniowaną wczesniej strukturą.</p>
+    {% for component in language_cache.components %}
+      <div class="card lg:card-side bg-base-100 shadow-sm flex flex-col lg:flex-row">
+        <figure class="w-full lg:w-1/2  aspect-[1/1]">
+          <img
+            class="object-cover w-full h-full"
+            src="{{language_cache.components[component].img}}"
+            alt="{{language_cache.components[component].name}}" />
+        </figure>
+        <div class="card-body w-full lg:w-1/2">
+          <h2 class="card-title">{{language_cache.components[component].name}}</h2>
+          <p class="text-wrap">{{language_cache.components[component].description}}</p>
 
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Listen</button>
-    </div>
+          <div class="card-actions justify-end">
+            <a href="{{language_cache.components[component].button.url}}">
+              <button class="btn btn-primary">{{language_cache.components[component].button.name}}</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
-    <div class="card lg:card-side bg-base-100 shadow-sm">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-      alt="Album" />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">SAS Rule Engine</h2>
-    <p>Zestaw makr w SAS, składający się na framework, do budowy silnika regułowego w SAS.</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Listen</button>
-    </div>
-  </div>
-</div>
-    <div class="card lg:card-side bg-base-100 shadow-sm">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-      alt="Album" />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">SAS Automate Notification</h2>
-    <p>Zestaw procedur w SAS, który umożliwia wysyłanie zestawu raportów przy pomocy e-mail.</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Listen</button>
-    </div>
-  </div>
-</div>
-    <div class="card lg:card-side bg-base-100 shadow-sm">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-      alt="Album" />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">Praca Inżynierska</h2>
-    <p>Modele regresyjne zbudowane na rzecz pracy inżynierskiej.</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Listen</button>
-    </div>
-  </div>
-</div>
-    {% else %}
-      {{portfolio | safe}}
-    {% endif %}
-  </div>
-</div>
-<br>
+

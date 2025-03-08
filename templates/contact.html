@@ -4,8 +4,8 @@
       <div class="chat-image avatar">
         <div class="w-10 rounded-full">
           <img
-            alt="Tailwind CSS chat bubble component"
-            src="{{url_for('static', filename='Obi-Wan-icon.png')}}" />
+            alt="Obi-Wan"
+            src="https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378382/Obi-Wan-icon_aofmww.png" />
         </div>
       </div>
       <div class="chat-header">
@@ -20,7 +20,7 @@
         <div class="w-10 rounded-full">
           <img
             alt="portrait"
-            src="{{ url_for('static', filename='portfolio.jpg') }}" />
+            src="https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378362/portfolio_mqgjom.jpg" />
         </div>
       </div>
       <div class="chat-header">
@@ -34,8 +34,8 @@
       <div class="chat-image avatar">
         <div class="w-10 rounded-full">
           <img
-            alt="Tailwind CSS chat bubble component"
-            src="{{url_for('static', filename='Obi-Wan-icon.png')}}" />
+            alt="Obi-Wan"
+            src="https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378382/Obi-Wan-icon_aofmww.png" />
         </div>
       </div>
       <div class="chat-header">
@@ -56,16 +56,16 @@
           <fieldset class="fieldset w-88 bg-base-200 border border-base-300 p-4 rounded-box">
 
             <label class="fieldset-label">{{language_cache.form.first_name.label}}</label>
-            <input type="text" required class="input validator" placeholder="{{language_cache.form.first_name.placeholder}}" />
+            <input type="text" required class="input validator" name="first-name" placeholder="{{language_cache.form.first_name.placeholder}}" />
 
             <label class="fieldset-label">{{language_cache.form.last_name.label}}</label>
-            <input type="text" required class="input validator" placeholder="{{language_cache.form.last_name.placeholder}}" />
+            <input type="text" required class="input validator" name="last-name" placeholder="{{language_cache.form.last_name.placeholder}}" />
 
             <label class="fieldset-label">{{language_cache.form.email.label}}</label>
-            <input class="input validator" type="email" required placeholder="{{language_cache.form.email.placeholder}}" />
+            <input type="email" required class="input validator" name="email" placeholder="{{language_cache.form.email.placeholder}}" />
 
             <label class="fieldset-label">{{language_cache.form.message.label}}</label>
-            <textarea name="content" placeholder="{{language_cache.form.message.placeholder}}" required class="textarea validator"></textarea>
+            <textarea required class="textarea validator" name="message" placeholder="{{language_cache.form.message.placeholder}}"></textarea>
             <input class="btn btn-soft btn-primary" type="submit" value="{{language_cache.form.button}}">
           </fieldset>
         </form>
@@ -79,7 +79,7 @@
         <h2 class="card-title">{{language_cache.descriptions.cooperation.title}}</h2>
         <ul>
           <li><p>{{language_cache.descriptions.cooperation.description}}</p></li>
-          <li class="justify-self-end"><button class="btn btn-secondary" href="mailto:kontakt@piotrbaran.me">kontakt@piotrbaran.me</button></li>
+          <li class="justify-self-end"><a href="mailto:kontakt@piotrbaran.me"><button class="btn btn-secondary">kontakt@piotrbaran.me</button></a></li>
         </ul>
       </div>
     </div>

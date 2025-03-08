@@ -80,8 +80,7 @@ def portfolio(language):
                                change_language_url = change_language_url,
                                home_page_url = urlparse(request.url).path[:3],
                                content=render_template("portfolio.html",
-                                                       language_cache = Language().get_portfolio(mongo = mongo, language = language),
-                                                       portfolio = None
+                                                       language_cache = Language().get_portfolio(mongo = mongo, language = language)
                                                        )
                                )
     else:
@@ -125,7 +124,8 @@ def page_not_found(error):
                            content=render_template("404.html")), 404
 
 
+
 @app.route("/send-email", methods=["POST"])
 def test():
     print(request.values)
-    return redirect(request.url)
+    return render_template("messageError.html")
