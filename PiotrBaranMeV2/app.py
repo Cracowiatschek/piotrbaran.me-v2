@@ -1,22 +1,21 @@
-import os
 
-import pymongo
 from flask import Flask, render_template, request, redirect, abort, render_template_string
 from flask_pymongo import PyMongo
-from flask_mail import Mail, Message
-import json
 from urllib.parse import urlparse
-from config import Config
-from models.base_config import BaseConfig
-from models.language import Language
-from controllers.change_language import change_language
-from controllers.time import contact_time
-from controllers.send_email import send_message
+from .config import Config
+from .models.base_config import BaseConfig
+from .models.language import Language
+from .controllers.change_language import change_language
+from .controllers.time import contact_time
+from .controllers.send_email import send_message
+import secrets
 
 app_config = Config()
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = secrets.token_hex(32)
 app.config["MONGO_URI"] = app_config.MONGO_URI
+
 mongo = PyMongo(app)
 
 
