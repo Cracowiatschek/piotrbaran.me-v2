@@ -52,6 +52,7 @@ try:
     cfg = db.get_collection("en")
     cfg.drop()
     db.create_collection("en")
+    db.create_collection("messages")
 except Exception as e:
     print(e)
 
@@ -111,7 +112,10 @@ try:
                     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"size-6\">\n\t<path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418\" />\n</svg>"
                 }
             },
-            "resume": "Pobierz CV"
+            "resume": {
+                "name": "Pobierz CV",
+                "file": "Piotr Baran CV - PL.pdf"
+            }
         }
     }
     contact = {
@@ -148,7 +152,10 @@ try:
             "resume": {
                 "title": "Może chcesz zapoznać się z moim doświadczeniem?",
                 "description": "Spróbuj pobrać moje CV poniżej.",
-                "button": "Pobierz"
+                "button": {
+                    "name":"Pobierz",
+                    "file":"Piotr Baran CV - PL.pdf"
+                }
             }
         }
     }
@@ -182,8 +189,9 @@ try:
                 "badges": "",
                 "button": {
                     "name": "Sprawdź",
-                    "url": "/pl/portfolio?name=Praca%20In%C5ynierska"
-                },
+                    "url": "/pl/portfolio?name=Praca%20Inżynierska"
+                }
+            },
             "4": {
                 "name": "SAS Automate Notification",
                 "description": "Zestaw procedur w SAS, który umożliwia wysyłanie zestawu raportów przy pomocy email.",
@@ -194,10 +202,182 @@ try:
                     "url": "/pl/portfolio?name=SAS%20Automate%20Notification"
                 }
             }
+        }
+    }
+    details_dct_app = {
+        "name": "DictionaryApp",
+        "context": "details",
+        "about": {
+            "name": "Opis",
+            "description": "Aplikacja służy do przypisania definicji sukcesów, dla kampanii marketingowych. Pobrane wartości można filtorwać względem fraz oraz typu kampanii. W celu zachowania przejrzystości pobrane kampanie są dzielone na strony po maksymalnie 20 pozycji. Po wyborze tego co ma zostać zdefinowane, użytkownikowi zostaje ustawiona lista pozycji do przypisania wartości, a po dokonanym zapisie użytkownik zostaje przekierowany na stronę główną.",
+            "img":{
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377808/dictionaryAppHome_q1kkby.png",
+                "description": "Przedstawienie możliwości wyboru i filtrowania pozycji do zdefiniowania."
+            },
+            "buttons": {
+                "1": {
+                    "btn":"<a role=\"button\" href=\"https://github.com/Cracowiatschek/DictionaryApp\" target=\"_blank\" class=\"btn btn-primary\">Więcej</a>"
+                }
+            }
+        },
+        "technology": {
+            "name": "Technologie",
+            "description": "Front-end jest głównie oparty o MaterializeCSS i szablony z wykorzystaniem Jinja2, z kolei na back-end składa się przede wszystkim Flask oraz plikowa baza danych sqlite.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377840/dictionaryAppWrite_ehe8p1.png",
+                "description": "Przedstawienie możliwości definiowania sukcesów dla poszczególnych pozycji."
+            },
+            "badges": {
+                "1": {
+                    "badge": "<div class=\"badge badge-accent\">Python</div>"
+                },
+                "2": {
+                    "badge": "<div class=\"badge badge-warning\">Flask</div>"
+                },
+                "3": {
+                    "badge": "<div class=\"badge badge-warning\">sqlite</div>"
+                },
+                "4": {
+                    "badge": "<div class=\"badge badge-secondary\">MaterializeCSS</div>"
+                },
+                "5": {
+                    "badge": "<div class=\"badge badge-primary\">Jinja2</div>"
+                },
+                "6": {
+                    "badge": "<div class=\"badge badge-primary\">HTML/CSS</div>"
+                }
             }
         }
     }
-    pl.insert_many([base, about, contact, portfolio])
+    details_sas_rule = {
+        "name": "SAS Rule Engine",
+        "context": "details",
+        "about": {
+            "name": "Opis",
+            "description": "Dzięki temu frameworkow użytkownik jest w stanie zbudować silnik regułowy, do obliczania grup docelowych, przy pomocy jednego centralnego narzędzia. Całość jest w pełni konfigurowalna i zawiera również makra do zarządzania poszczególnymi wyzwalaczami i regułami. Docelowo w narzędziu ma się znaleźć komponent raportowy, który będzie wysyłał mailowe podsumowanie wyliczonych grup i poszczególnych kryteriów odrzutu.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377949/rulesEngineCode_onuuhe.png",
+                "description": "Fragment przykładowej konfiguracji silnika."
+            },
+            "buttons": {
+                "1": {
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine\" target=\"_blank\" class=\"btn btn-primary\">Więcej</a>"
+                },
+                "2": {
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine/wiki\" target=\"_blank\" class=\"btn btn-primary\">Dokumentacja</a>"
+                }
+            }
+        },
+        "technology": {
+            "name": "Technologie",
+            "description": "Całość jest oparta w pełni o natywne funkcje języka SAS.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377944/rulesEngineArchitecture_re3lcs.png",
+                "description": "Fragment architektury rozwiązania."
+            },
+            "badges": {
+                "1": {
+                    "badge": "<div class=\"badge badge-info\">SAS</div>"
+                }
+            }
+        }
+    }
+    details_thesis = {
+        "name": "Praca Inżynierska",
+        "context": "details",
+        "about": {
+            "name": "Opis",
+            "description": "Praca dyplomowa polegała, na zebraniu pomiarów na terenie Krakowa, a następnie wykonaniu analizy eksploracyjnej danych i budowie modelu predykcyjnego dla objętości drzew w mieście. W efekcie powstało kilka modeli, o różnej dokładności, ale też z różnym zastosowaniem, od prostego terenowego wykorzystania, do zaawansowanego labolatoryjnego.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378208/dataSciencePairPlot_f3wwtp.png",
+                "description": "Analiza eksploracyjna zmiennych."
+            },
+            "buttons": {
+                "1": {
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/Thesis_project\" target=\"_blank\" class=\"btn btn-primary\">Więcej</a>"
+                }
+            }
+        },
+        "technology": {
+            "name": "Technologie",
+            "description": "Realizacja była oparta o środowisko zeszytowe w datalore od JetBrains, przy pomocy zestawu bibliotek ML w Python tj. pandas, seaborn, scipy, statsmodels i scikit-learn.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378208/dataScienceCurves_ip3eqi.png",
+                "description": "Przewidywania vs. Rzeczywiste objętości"
+            },
+            "badges": {
+                "1": {
+                    "badge": "<div class=\"badge badge-accent\">Python</div>"
+                },
+                "2": {
+                    "badge": "<div class=\"badge badge-warning\">pandas</div>"
+                },
+                "3": {
+                    "badge": "<div class=\"badge badge-warning\">sci-kit learn</div>"
+                },
+                "4": {
+                    "badge": "<div class=\"badge badge-warning\">scipy</div>"
+                },
+                "5": {
+                    "badge": "<div class=\"badge badge-warning\">statsmodels</div>"
+                },
+                "6": {
+                    "badge": "<div class=\"badge badge-warning\">seaborn</div>"
+                },
+                "7": {
+                    "badge": "<div class=\"badge badge-info\">Jupyter Notebook</div>"
+                },
+
+            }
+        }
+    }
+    details_sas_notif = {
+        "name": "SAS Automate Notification",
+        "context": "details",
+        "about": {
+            "name": "Opis",
+            "description": "To jest zestaw dwóch pojedynczych makr, które umożliwiają wysyłkę notyfikacji mailowej w sposób prosty lub personalizowany. Sposób prosty jest reprezentowany przez prostą tabelę z wynikami, natomiast personalizacja, może polegać na wstawieniu indywidualnej treści dla odbiorcy lub też spersonalizowaniu pełnego szablonu HTML.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377945/notificationCode_aocopl.png",
+                "description": "Fragment przykładowej konfiguracji powiadomienia."
+            },
+            "buttons": {
+                "1": {
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS_Autoamtion\" target=\"_blank\" class=\"btn btn-primary\">Więcej</a>"
+                }
+            }
+        },
+        "technology": {
+            "name": "Technologie",
+            "description": "Całość jest oparta w pełni o natywne funkcje języka SAS. W przypadku personalizowanym można również wykorzystać HTML.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377945/notificationEmail_xrtxad.png",
+                "description": "Screenshot skrzynki mailowej."
+            },
+            "badges": {
+                "1": {
+                    "badge": "<div class=\"badge badge-info\">SAS</div>"
+                },
+                "2": {
+                    "badge": "<div class=\"badge badge-warning\">HTML</div>"
+                }
+            }
+        }
+    }
+    message = {
+        "name": "messageContent.html",
+        "title": "Wiadomość do Piotra Barana została dostarczona. Dziękuję!",
+        "content": {
+            "thanks": "Dziękuję za Twoją wiadomość!",
+            "hello": "Cześć,",
+            "about_the_answer": "Twoja wiadomość właśnie do mnie została dostarczona, postaram się na nią odpowiedzieć jak najszybciej.",
+            "your_message": "Treść wiadomości:",
+            "questions": "Jeśli masz jakieś pytania to śmiało adresuj je w odpowiedzi na tego maila.",
+            "regards": "Pozdrawiam,",
+            "come_back": "Wróć na stronę"
+        }
+    }
+    pl.insert_many([base, about, contact, portfolio, details_dct_app, details_thesis, details_sas_rule, details_sas_notif, message])
     r = pl.find()
     print("PL")
     for i in r:
@@ -262,7 +442,10 @@ try:
                     "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"size-6\">\n\t<path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418\" />\n</svg>"
                 }
             },
-            "resume": "Get resume"
+            "resume": {
+                "name": "Get resume",
+                "file": "Piotr Baran CV - EN.pdf"
+            }
         }
     }
     contact = {
@@ -274,7 +457,7 @@ try:
                 "placeholder": "John"
             },
             "last_name": {
-                "label": "nazwisko",
+                "label": "last name",
                 "placeholder": "Smith"
             },
             "email": {
@@ -282,7 +465,7 @@ try:
                 "placeholder": "mail@site.com"
             },
             "message": {
-                "label": "Your message",
+                "label": "your message",
                 "placeholder": "Hello..."
             },
             "button": "Send"
@@ -299,7 +482,10 @@ try:
             "resume": {
                 "title": "Maybe you would like to read about my experience?",
                 "description": "Try get my CV below.",
-                "button": "Get resume"
+                "button": {
+                    "name":"Get resume",
+                    "file": "Piotr Baran CV - EN.pdf"
+                }
             }
         }
     }
@@ -348,7 +534,181 @@ try:
             }
         }
     }
-    pl.insert_many([base, about, contact, portfolio])
+    details_dct_app = {
+        "name": "DictionaryApp",
+        "context": "details",
+        "about": {
+            "name": "About",
+            "description": "The application is used to assign definitions of successes for marketing campaigns. Downloaded values can be filtered by phrases and campaign type. In order to maintain clarity, downloaded campaigns are divided into pages of up to 20 items. After selecting what is to be defined, the user is set a list of items to assign values to, and after saving, the user is redirected to the main page.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377808/dictionaryAppHome_q1kkby.png",
+                "description": "Presentation of the possibilities of selecting and filtering items to be defined."
+            },
+            "buttons": {
+                "1": {
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/DictionaryApp\" target=\"_blank\" class=\"btn btn-primary\">More</a>"
+                }
+            }
+        },
+        "technology": {
+            "name": "Tech stack",
+            "description": "The front-end is mainly based on MaterializeCSS and templates using Jinja2, while the back-end consists primarily of Flask and an sqlite file database.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377840/dictionaryAppWrite_ehe8p1.png",
+                "description": "Presentation of possibilities for defining success for individual positions."
+            },
+            "badges": {
+                "1": {
+                    "badge": "<div class=\"badge badge-accent\">Python</div>"
+                },
+                "2": {
+                    "badge": "<div class=\"badge badge-warning\">Flask</div>"
+                },
+                "3": {
+                    "badge": "<div class=\"badge badge-warning\">sqlite</div>"
+                },
+                "4": {
+                    "badge": "<div class=\"badge badge-secondary\">MaterializeCSS</div>"
+                },
+                "5": {
+                    "badge": "<div class=\"badge badge-primary\">Jinja2</div>"
+                },
+                "6": {
+                    "badge": "<div class=\"badge badge-primary\">HTML/CSS</div>"
+                }
+            }
+        }
+    }
+    details_sas_rule = {
+        "name": "SAS Rule Engine",
+        "context": "details",
+        "about": {
+            "name": "About",
+            "description": "Thanks to this framework, the user is able to build a rule engine for calculating target groups using one central tool. The whole thing is fully configurable and also includes macros for managing individual triggers and rules. The tool is to eventually include a reporting component that will send an email summary of the calculated groups and individual rejection criteria.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377949/rulesEngineCode_onuuhe.png",
+                "description": "Fragment of an example engine configuration."
+            },
+            "buttons": {
+                "1": {
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine\" target=\"_blank\" class=\"btn btn-primary\">More</a>"
+                },
+                "2": {
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine/wiki\" target=\"_blank\" class=\"btn btn-primary\">Docs</a>"
+                }
+            }
+        },
+        "technology": {
+            "name": "Tech stack",
+            "description": "The whole thing is based entirely on native SAS language functions.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377944/rulesEngineArchitecture_re3lcs.png",
+                "description": "Fragment of the solution architecture."
+            },
+            "badges": {
+                "1": {
+                    "badge": "<div class=\"badge badge-info\">SAS</div>"
+                }
+            }
+        }
+    }
+    details_thesis = {
+        "name": "Thesis of engineer",
+        "context": "details",
+        "about": {
+            "name": "About",
+            "description": "The diploma thesis consisted of collecting measurements in the area of Krakow, and then performing exploratory analysis of the data and building a predictive model for the volume of trees in the city. As a result, several models were created, with different accuracy, but also with different applications, from simple field use to advanced laboratory use.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378208/dataSciencePairPlot_f3wwtp.png",
+                "description": "Exploratory analysis of variables."
+            },
+            "buttons": {
+                "1": {
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/Thesis_project\" target=\"_blank\" class=\"btn btn-primary\">More</a>"
+                }
+            }
+        },
+        "technology": {
+            "name": "Tech stack",
+            "description": "The implementation was based on the notebook environment in datalore from JetBrains, using a set of ML libraries in Python, i.e. pandas, seaborn, scipy, statsmodels and scikit-learn.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378208/dataScienceCurves_ip3eqi.png",
+                "description": "Projections vs. Actual Volumes"
+            },
+            "badges": {
+                "1": {
+                    "badge": "<div class=\"badge badge-accent\">Python</div>"
+                },
+                "2": {
+                    "badge": "<div class=\"badge badge-warning\">pandas</div>"
+                },
+                "3": {
+                    "badge": "<div class=\"badge badge-warning\">sci-kit learn</div>"
+                },
+                "4": {
+                    "badge": "<div class=\"badge badge-warning\">scipy</div>"
+                },
+                "5": {
+                    "badge": "<div class=\"badge badge-warning\">statsmodels</div>"
+                },
+                "6": {
+                    "badge": "<div class=\"badge badge-warning\">seaborn</div>"
+                },
+                "7": {
+                    "badge": "<div class=\"badge badge-info\">Jupyter Notebook</div>"
+                },
+
+            }
+        }
+    }
+    details_sas_notif = {
+        "name": "SAS Automate Notification",
+        "context": "details",
+        "about": {
+            "name": "About",
+            "description": "This is a set of two individual macros that allow you to send email notifications in a simple or personalized way. The simple way is represented by a simple table of results, while personalization can consist of inserting individual content for the recipient or personalizing the full HTML template.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377945/notificationCode_aocopl.png",
+                "description": "Fragment of an example notification configuration."
+            },
+            "buttons": {
+                "1": {
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS_Autoamtion\" target=\"_blank\" class=\"btn btn-primary\">More</a>"
+                }
+            }
+        },
+        "technology": {
+            "name": "Tech stack",
+            "description": "The whole thing is based entirely on native SAS language functions. In a personalized case, HTML can also be used.",
+            "img": {
+                "url": "https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741377945/notificationEmail_xrtxad.png",
+                "description": "Screenshot of email inbox."
+            },
+            "badges": {
+                "1": {
+                    "badge": "<div class=\"badge badge-info\">SAS</div>"
+                },
+                "2": {
+                    "badge": "<div class=\"badge badge-warning\">HTML</div>"
+                }
+            }
+        }
+    }
+    message = {
+        "name": "messageContent.html",
+        "title": "Your message to Piotr Baran was delivered. Thank you!",
+        "content": {
+            "thanks": "Thanks for Your message!",
+            "hello": "Hello,",
+            "about_the_answer": "Your message has just been delivered to me, I will try to respond to it as soon as possible.",
+            "your_message": "Message content:",
+            "questions": "If you have any questions, feel free to address them in a reply to this email.",
+            "regards": "Best regards,",
+            "come_back": "Come back to website"
+        }
+    }
+    pl.insert_many(
+        [base, about, contact, portfolio, details_dct_app, details_thesis, details_sas_rule, details_sas_notif, message])
     r = pl.find()
     print("EN")
     for i in r:

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{message.title}}</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #0f172a; padding: 20px; color: #e2e8f0;">
+
+    <table align="center" width="100%" style="max-width: 600px; background-color: #1e293b; border-radius: 8px; box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);">
+        <tr>
+            <td style="background-color: #334155; padding: 20px; text-align: center; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                <h2 style="color: #f8fafc; margin: 0;">{{message.thanks}}</h2>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 20px;">
+                <p style="font-size: 16px; color: #e2e8f0;">{{message.content.hello}}</p>
+                <p style="font-size: 16px; color: #e2e8f0;">
+                    {{message.content.about_the_answer}}
+                </p>
+                <p style="font-size: 16px; color: #e2e8f0;">
+                    {{message.content.your_message}}
+                </p>
+                <div style="background-color: #475569; padding: 15px; border-radius: 6px; margin: 20px 0; font-style: italic; border-left: 4px solid #3b82f6; color: #f8fafc;">
+                    {{ message_content }}
+                </div>
+
+                <p style="font-size: 16px; color: #e2e8f0;">
+                    {{message.content.questions}}
+                </p>
+                <p style="font-size: 16px; color: #e2e8f0;">{{message.content.regards}}<br><strong>Piotr Baran</strong></p>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="piotrbaran.me/{{language}}" style="background-color: #3b82f6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-size: 16px; display: inline-block;">
+                        {{message.content.come_back}}
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: #0f172a; padding: 15px; text-align: center; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+                <p style="color: #94a3b8; font-size: 12px;">&copy; 2025 Piotr Baran</p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

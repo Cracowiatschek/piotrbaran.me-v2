@@ -52,7 +52,7 @@
     <div class="card bg-base-100 w-96 shadow-sm">
       <div class="card-body">
         <h2 class="card-title">{{language_cache.form.label}}</h2>
-        <form hx-post="/send-email" hx-target="#response" hx-indicator="#indicator">
+        <form hx-post="/send-email?language={{language}}" hx-target="#response" hx-indicator="#indicator">
           <fieldset class="fieldset w-88 bg-base-200 border border-base-300 p-4 rounded-box">
 
             <label class="fieldset-label">{{language_cache.form.first_name.label}}</label>
@@ -78,8 +78,8 @@
       <div class="card-body">
         <h2 class="card-title">{{language_cache.descriptions.cooperation.title}}</h2>
         <ul>
-          <li><p>{{language_cache.descriptions.cooperation.description}}</p></li>
-          <li class="justify-self-end"><a href="mailto:kontakt@piotrbaran.me"><button class="btn btn-secondary">kontakt@piotrbaran.me</button></a></li>
+          <li><p class="text-wrap">{{language_cache.descriptions.cooperation.description}}</p></li>
+          <li class="justify-self-end"><a role="button" href="mailto:kontakt@piotrbaran.me" class="btn btn-secondary">kontakt@piotrbaran.me</a></li>
         </ul>
       </div>
     </div>
@@ -88,7 +88,7 @@
         <h2 class="card-title">{{language_cache.descriptions.resume.title}}</h2>
         <ul>
           <li><p>{{language_cache.descriptions.resume.description}}</p></li>
-          <li class="justify-self-end"><button class="btn btn-secondary justify-self-end">{{language_cache.descriptions.resume.button}}</button></li>
+          <li class="justify-self-end"><a role="button" href="{{ url_for('static', filename=language_cache.descriptions.resume.button.file) }}" download="{{language_cache.descriptions.resume.button.file}}" class="btn btn-secondary justify-self-end">{{language_cache.descriptions.resume.button.name}}</a></li>
         </ul>
       </div>
     </div>

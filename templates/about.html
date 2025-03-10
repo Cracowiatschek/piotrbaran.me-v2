@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="row-span-1">
-            <button hx-get="/resume" class="btn btn-primary"> {{language_cache.hero_banner.resume}} </button>
+            <a role="button" href="{{ url_for('static', filename=language_cache.hero_banner.resume.file) }}" download="{{language_cache.hero_banner.resume.file}}" class="btn btn-primary"> {{language_cache.hero_banner.resume.name}} </a>
           </div>
         </div>
       </div>

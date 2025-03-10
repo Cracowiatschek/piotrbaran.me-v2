@@ -1,3 +1,4 @@
+{% if header %}
 <div class="flex justify-center gap-4">
   <div class="grid grid-flow-col self-center grid-rows-2 gap-4">
     <div class="justify-self-center">
@@ -5,28 +6,9 @@
     </div>
   </div>
 </div>
+{%else%}
+{%endif%}
 <div id="tech-content" class="flex justify-center">
-  <div style="margin-left: 5%; margin-right: 5%" class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2  gap-10">
-    {% for component in language_cache.components %}
-      <div class="card lg:card-side bg-base-100 shadow-sm flex flex-col lg:flex-row">
-        <figure class="w-full lg:w-1/2  aspect-[1/1]">
-          <img
-            class="object-cover w-full h-full"
-            src="{{language_cache.components[component].img}}"
-            alt="{{language_cache.components[component].name}}" />
-        </figure>
-        <div class="card-body w-full lg:w-1/2">
-          <h2 class="card-title">{{language_cache.components[component].name}}</h2>
-          <p class="text-wrap">{{language_cache.components[component].description}}</p>
-
-          <div class="card-actions justify-end">
-            <a href="{{language_cache.components[component].button.url}}">
-              <button class="btn btn-primary">{{language_cache.components[component].button.name}}</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
+  {{content|safe}}
 </div>
 

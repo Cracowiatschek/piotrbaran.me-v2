@@ -1,0 +1,64 @@
+<div class="flex flex-col gap-4 w-full">
+  <div class="navbar p-4 shadow-lg ">
+    <div class="flex-1">
+      <button hx-get="{{url}}" hx-target="#tech-content"  hx-push-url="{{url[:13]}}" class="btn btn-ghost">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+    </div>
+    <div class="flex-none">
+      <span class="text-xl font-bold">{{content.name}}</span>
+    </div>
+    <div class="flex-1"></div>
+  </div>
+  <div class="divider"></div>
+  <div class="flex flex-row">
+    <div class="basis-1/6"></div>
+    <div class="basis-2/3">
+      <div class="grid grid-flow-row-dense grid-cols-1 gap-10">
+        <div class="card lg:card-side bg-base-100 shadow-sm flex flex-col lg:flex-row w-full">
+          <figure class="w-full lg:w-1/2">
+            <img
+              class="object-cover w-full h-full"
+              src="{{content.about.img.url}}"
+              alt="{{content.about.img.description}}"/>
+          </figure>
+          <div class="card-body w-full lg:w-1/2">
+            <h2 class="card-title">{{content.about.name}}</h2>
+            <p class="text-wrap text-justify">{{content.about.description}}</p>
+            <div class="card-actions justify-end">
+              {% if buttons == 'ready' %}
+                {% for button in content.about.buttons %}
+                  {{content.about.buttons[button].btn|safe}}
+                {%endfor%}
+              {%else%}
+              {%endif%}
+            </div>
+          </div>
+        </div>
+        <div class="card lg:card-side bg-base-100 shadow-sm flex flex-col lg:flex-row w-full">
+          <div class="card-body w-full lg:w-1/2">
+            <h2 class="card-title">{{content.technology.name}}</h2>
+            <p class="text-wrap text-justify">{{content.technology.description}}</p>
+            <div class="card-actions justify-start">
+              {% if badges == 'ready' %}
+                {% for badge in content.technology.badges %}
+                  {{content.technology.badges[badge].badge|safe}}
+                {%endfor%}
+              {%else%}
+              {%endif%}
+            </div>
+          </div>
+          <figure class="w-full lg:w-1/2">
+            <img
+              class="object-cover w-full h-full"
+              src="{{content.technology.img.url}}"
+              alt="{{content.technology.img.description}}"/>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="basis-1/6"></div>
+  </div>
+</div>
