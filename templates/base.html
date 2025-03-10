@@ -59,7 +59,8 @@
 
   <footer class="footer bg-neutral text-neutral-content items-center p-4">
     <aside class="grid-flow-col items-center">
-      {{ app_cfg.footer.logo|safe }}
+      <img class="w-16" src="{{url_for('static', filename='favicon.png')}}" alt="logo">
+<!--      {{ app_cfg.footer.logo|safe }}-->
       <p>{{ app_cfg.footer.logo_description }}</p>
     </aside>
     <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">

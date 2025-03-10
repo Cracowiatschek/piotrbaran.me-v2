@@ -1,6 +1,6 @@
 
 
-class CacheConfig:
+class BaseConfig:
     @staticmethod
     def get_config(mongo):
         cursor = mongo.db.get_collection("config")

@@ -4,30 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="finalize portfolio subsite and implement contact form POST method">
-      <change afterPath="$PROJECT_DIR$/static/Piotr Baran CV - EN.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/Piotr Baran CV - PL.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/portfolio_menu.html" afterDir="false" />
+    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="finished main works">
+      <change afterPath="$PROJECT_DIR$/controllers/send_email.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/language.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/language.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Notif/notificationCode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Notif/notificationEmail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Obi-Wan-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/RulesEng/rulesEngineArchitecture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/RulesEng/rulesEngineCode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dataScience/dataScienceCurves.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dataScience/dataScienceErrorPlots.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dataScience/dataSciencePairPlot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dictApp/dictionaryAppHome.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dictApp/dictionaryAppWrite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/portfolio.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/messageContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/messageContent.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -66,20 +49,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.app.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.temp.executor": "Run",
-    "Python.time.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/piotr/PycharmProjects/piotrbaranMeV2/static"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.temp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.time.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/piotr/PycharmProjects/piotrbaranMeV2/static&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\piotr\PycharmProjects\piotrbaranMeV2\static" />
@@ -156,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741433572359</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="finished main works">
+      <option name="closed" value="true" />
+      <created>1741623340919</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1741623340919</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +168,7 @@
     <MESSAGE value="find way to language managment" />
     <MESSAGE value="finalize contact and about sub side, start working with portfolio," />
     <MESSAGE value="finalize portfolio subsite and implement contact form POST method" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize portfolio subsite and implement contact form POST method" />
+    <MESSAGE value="finished main works" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished main works" />
   </component>
 </project>

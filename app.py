@@ -1,16 +1,17 @@
 import os
+
+import pymongo
 from flask import Flask, render_template, request, redirect, abort, render_template_string
 from flask_pymongo import PyMongo
 from flask_mail import Mail, Message
 import json
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
 from urllib.parse import urlparse
 from config import Config
-from models.cache_config import CacheConfig
+from models.base_config import BaseConfig
 from models.language import Language
 from controllers.change_language import change_language
 from controllers.time import contact_time
+from controllers.send_email import send_message
 
 app_config = Config()
 
@@ -34,7 +35,7 @@ def main(language):
         change_language_url = change_language(request.url)
 
         return render_template("base.html",
-                               app_cfg = CacheConfig().get_config(mongo),
+                               app_cfg = BaseConfig().get_config(mongo),
                                language = language,
                                home_page_url = urlparse(request.url).path[:3],
                                language_cache = Language().get_base(mongo = mongo, language = language),
@@ -52,7 +53,7 @@ def about(language):
         change_language_url = change_language(request.url)
 
         return render_template("base.html",
-                               app_cfg = CacheConfig().get_config(mongo),
+                               app_cfg = BaseConfig().get_config(mongo),
                                language = language,
                                home_page_url = urlparse(request.url).path[:3],
                                language_cache = Language().get_base(mongo = mongo, language = language),
@@ -80,7 +81,7 @@ def portfolio(language):
                                     )
         elif "name" in request.args and "HX-Request" not in request.headers:
             return render_template("base.html",
-                                   app_cfg = CacheConfig().get_config(mongo),
+                                   app_cfg = BaseConfig().get_config(mongo),
                                    language = language,
                                    language_cache = Language().get_base(mongo = mongo, language = language),
                                    change_language_url = change_language_url,
@@ -106,7 +107,7 @@ def portfolio(language):
                                    )
 
         return render_template("base.html",
-                               app_cfg = CacheConfig().get_config(mongo),
+                               app_cfg = BaseConfig().get_config(mongo),
                                language = language,
                                language_cache = Language().get_base(mongo = mongo, language = language),
                                change_language_url = change_language_url,
@@ -126,9 +127,8 @@ def portfolio(language):
 def contact(language):
     if language in ["pl", "en"]:
         change_language_url = change_language(request.url)
-        # https: // hook.eu2.make.com / p12pjc4l53xac3tpkb6g5xw5rhhe1ojl
         return render_template("base.html",
-                               app_cfg = CacheConfig().get_config(mongo),
+                               app_cfg = BaseConfig().get_config(mongo),
                                language = language,
                                language_cache = Language().get_base(mongo = mongo, language = language),
                                change_language_url = change_language_url,
@@ -145,10 +145,8 @@ def contact(language):
 
 @app.errorhandler(404)
 def page_not_found(error):
-    change_language_url = change_language(request.url)
-    print(change_language_url)
     return render_template("base.html",
-                           app_cfg = CacheConfig().get_config(mongo),
+                           app_cfg = BaseConfig().get_config(mongo),
                            language = "pl",
                            change_language_url = "/pl",
                            home_page_url = "/pl",
@@ -162,29 +160,28 @@ def send_email():
     language = request.args.get("language")
     try:
         if language in ["pl", "en"]:
-            receiver = request.form.get("email")
-            message_content = request.form.get("message")
             message_template = Language().get_message_content(mongo = mongo, language = language)
-
             html_content = render_template("messageContent.html",
                                             message = message_template,
-                                            message_content = message_content
+                                            message_content = request.form.get("message")
                                             )
-            message = Mail(
-                from_email = Config.SENDER_EMAIL,
-                to_emails = receiver,
-                subject = message_template.title,
-                html_content = html_content
+            message = send_message(
+                ready_template = html_content,
+                sender = Config.SENDER_EMAIL,
+                receiver = request.form.get("email"),
+                subject = message_template["title"],
+                sg_api_key = Config.SENDGRID_API_KEY,
+                mongo = mongo,
+                request_content = request,
+                language = language
             )
 
-            sg = SendGridAPIClient(Config.SENDGRID_API_KEY)
-            response = sg.send(message)
-            if response.status_code in [200, 202]:
+            if message in [200, 202]:
                 return render_template("messageSuccessful.html", language = language)
             else:
-                return Exception
+                return render_template("messageError.html", language = language), 500
         else:
-            return Exception
+            return render_template("messageError.html", language = language), 500
     except Exception as e:
         print(e)
         return render_template("messageError.html", language = language), 500
