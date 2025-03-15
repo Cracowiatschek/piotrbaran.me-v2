@@ -4,35 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="final version, go to test">
-      <change afterPath="$PROJECT_DIR$/PiotrBaranMeV2/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PiotrBaranMeV2/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requiements.txt" afterDir="false" />
+    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="deployment version">
+      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/change_language.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/change_language.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/send_email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/time.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/time.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/base_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/models/base_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/language.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/models/language.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Piotr Baran CV - EN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/static/Piotr Baran CV - EN.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Piotr Baran CV - PL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/static/Piotr Baran CV - PL.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/static/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/htmx.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/static/htmx.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/static/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/static/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/messageContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/messageContent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/messageError.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/messageError.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/messageSuccessful.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/messageSuccessful.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/portfolio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolioDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/portfolioDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolioMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/portfolioMenu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/change_language.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/change_language.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/send_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/models/base_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/models/base_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,21 +51,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.temp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.time.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/piotr/PycharmProjects/piotrbaranMeV2/static&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python tests.Python tests in conftest.py.executor": "Run",
+    "Python.app.executor": "Run",
+    "Python.base_config.executor": "Run",
+    "Python.db_config.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.temp.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.time.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/piotr/PycharmProjects/piotrbaranMeV2/static"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\piotr\PycharmProjects\piotrbaranMeV2\static" />
@@ -181,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741637884799</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="deployment version">
+      <option name="closed" value="true" />
+      <created>1741640147389</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741640147389</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,6 +194,7 @@
     <MESSAGE value="finalize portfolio subsite and implement contact form POST method" />
     <MESSAGE value="finished main works" />
     <MESSAGE value="final version, go to test" />
-    <option name="LAST_COMMIT_MESSAGE" value="final version, go to test" />
+    <MESSAGE value="deployment version" />
+    <option name="LAST_COMMIT_MESSAGE" value="deployment version" />
   </component>
 </project>
