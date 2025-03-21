@@ -10,6 +10,7 @@ def send_message(ready_template, sender, receiver, subject, sg_api_key, mongo, r
         subject = subject,
         html_content = ready_template
     )
+    message.add_cc(sender)
     #materialize email client
     sg = SendGridAPIClient(sg_api_key)
     #send message

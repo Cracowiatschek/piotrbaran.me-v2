@@ -1,4 +1,4 @@
-
+import secrets
 from flask import Flask, render_template, request, redirect, abort
 from flask_pymongo import PyMongo
 from urllib.parse import urlparse
@@ -14,8 +14,9 @@ mongo = PyMongo()
 
 def create_app(config_class=app_config):
     app = Flask(__name__)
-    app.config.from_object(config_class)  # load config class
-
+    # app.config.from_object(config_class)  # load config class
+    app.config["MONGO_URI"] = Config.MONGO_URI
+    app.config["SECRET_KEY"] = secrets.token_hex(32)
 
     # mongo init
     mongo.init_app(app)
@@ -196,3 +197,6 @@ def create_app(config_class=app_config):
 
 
 app = create_app(app_config)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port="8000")

@@ -2,6 +2,10 @@
 <html lang="{{language}}">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Piotr Baran - data engineer/web developer portfolio, key skills: SQL/noSQL, Python and SAS">
+  <meta name="author" content="Piotr Baran">
+  <meta name="copyright" content="© 2025 Piotr Baran">
   <title>{{ app_cfg.head_title }}</title>
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
@@ -21,7 +25,10 @@
 </head>
 <body>
 <div id="main" data-theme="dark">
-  <div class="navbar bg-base-100">
+  <div class="navbar bg-base-100 fixed top-0 w-full z-50 shadow-md">
+<!--    <button class="btn btn-square btn-ghost">-->
+<!--     <img class="w-12" src="{{url_for('static', filename='favicon.png')}}" alt="logo">-->
+<!--    </button>-->
     <div class="flex-1">
       <a class="btn btn-ghost text-xl" href="{{home_page_url}}">{{app_cfg.navbar_title}}</a>
     </div>
@@ -38,7 +45,7 @@
                  hx-swap="innerHTML"
                  type="checkbox"
                  hx-push-url="true"
-                 class="toggle border-gray-500 bg-gray-500 hover:bg-gray-400"/>
+                 class="toggle toggle-xs border-gray-500 bg-gray-500 hover:bg-gray-400"/>
           {%else%}
           <input hx-get="{{change_language_url}}"
                  hx-trigger="change delay:300ms"
@@ -47,23 +54,23 @@
                  type="checkbox"
                  hx-push-url="true"
                  checked
-                 class="toggle border-gray-500 bg-gray-500 hover:bg-gray-400"/>
+                 class="toggle toggle-xs border-gray-500 bg-gray-500 hover:bg-gray-400"/>
           {%endif%}
           {{ app_cfg.language.en }}</div></ul>
     </div>
   </div>
 
-  <div id="app-content">
+  <div id="app-content" class="pt-16">
     {{ content | safe }}
   </div>
 
-  <footer class="footer bg-neutral text-neutral-content items-center p-4">
-    <aside class="grid-flow-col items-center">
+  <footer class="footer bg-neutral text-neutral-content items-center p-4 flex flex-col md:flex-row justify-between">
+    <aside class="flex items-center gap-4">
       <img class="w-16" src="{{url_for('static', filename='favicon.png')}}" alt="logo">
 <!--      {{ app_cfg.footer.logo|safe }}-->
       <p>{{ app_cfg.footer.logo_description }}</p>
     </aside>
-    <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <nav class="flex gap-4">
       <a href="mailto:kontakt@piotrbaran.me">
         <kbd class="kbd kbd-md">e-mail: kontakt@piotrbaran.me</kbd>
       </a>

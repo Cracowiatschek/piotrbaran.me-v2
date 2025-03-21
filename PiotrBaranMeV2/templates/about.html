@@ -5,39 +5,39 @@
         class="max-w-sm rounded-full shadow-2xl" />
       <div>
         <h1 class="text-5xl font-bold"> {{ language_cache.hero_banner.title }} </h1>
-        <p class="py-6">
+        <p class="py-6 text-justify">
           {{ language_cache.hero_banner.description }}
         </p>
-        <div id="stats-container" class="grid grid-cols-1 content-center gap-4" >
-          <div class="row-span-1">
-            <div class="stats shadow">
+        <div id="stats-container" class="grid grid-cols-1 content-center gap-4 md:items-start" >
+          <div class="row-span-1 w-full flex md:block justify-center">
+            <div class="stats stats-vertical lg:stats-horizontal shadow">
               {% for skill in language_cache.hero_banner.achievements_top %}
               <div class="stat">
                 <div class="stat-figure text-secondary">
                   {{ language_cache.hero_banner.achievements_top[skill].icon|safe }}
                 </div>
-                <div class="stat-title">{{ language_cache.hero_banner.achievements_top[skill].level }}</div>
+<!--                <div class="stat-title">{{ language_cache.hero_banner.achievements_top[skill].level }}</div>-->
                 <div class="stat-value">{{ language_cache.hero_banner.achievements_top[skill].skill }}</div>
                 <div class="stat-desc">{{ language_cache.hero_banner.achievements_top[skill].additional_info }}</div>
               </div>
               {% endfor %}
             </div>
           </div>
-          <div class="row-span-1">
-            <div class="stats shadow">
+          <div class="row-span-1 w-full flex md:block justify-center">
+            <div class="stats stats-vertical lg:stats-horizontal shadow">
               {% for skill in language_cache.hero_banner.achievements_bottom %}
               <div class="stat">
                 <div class="stat-figure text-secondary">
                   {{ language_cache.hero_banner.achievements_bottom[skill].icon|safe }}
                 </div>
-                <div class="stat-title">{{ language_cache.hero_banner.achievements_bottom[skill].level }}</div>
+<!--                <div class="stat-title">{{ language_cache.hero_banner.achievements_bottom[skill].level }}</div>-->
                 <div class="stat-value">{{ language_cache.hero_banner.achievements_bottom[skill].skill }}</div>
                 <div class="stat-desc">{{ language_cache.hero_banner.achievements_bottom[skill].additional_info }}</div>
               </div>
               {% endfor %}
             </div>
           </div>
-          <div class="row-span-1">
+          <div class="row-span-1 w-full flex md:block justify-center">
             <a role="button" href="{{ url_for('static', filename=language_cache.hero_banner.resume.file) }}" download="{{language_cache.hero_banner.resume.file}}" class="btn btn-primary"> {{language_cache.hero_banner.resume.name}} </a>
           </div>
         </div>
