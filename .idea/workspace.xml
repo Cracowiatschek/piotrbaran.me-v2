@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="deployment version">
-      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arch/db_config-2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/change_language.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/change_language.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/controllers/send_email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/models/base_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/models/base_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arch/db_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/arch/db_config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +55,7 @@
     "Python tests.Python tests in conftest.py.executor": "Run",
     "Python.app.executor": "Run",
     "Python.base_config.executor": "Run",
+    "Python.db_config-2.executor": "Run",
     "Python.db_config.executor": "Run",
     "Python.main.executor": "Run",
     "Python.temp.executor": "Run",
@@ -65,12 +64,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/piotr/PycharmProjects/piotrbaranMeV2/static"
+    "git-widget-placeholder": "development",
+    "last_opened_file_path": "C:/Users/piotr/PycharmProjects/piotrbaranMeV2/arch"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\piotr\PycharmProjects\piotrbaranMeV2\arch" />
       <recent name="C:\Users\piotr\PycharmProjects\piotrbaranMeV2\static" />
       <recent name="C:\Users\piotr\PycharmProjects\piotrbaranMeV2\templates" />
       <recent name="C:\Users\piotr\PycharmProjects\piotrbaranMeV2\static\dataScience" />
@@ -87,7 +87,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-14705d77f0bb-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.25659.43" />
+        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -195,6 +195,7 @@
     <MESSAGE value="finished main works" />
     <MESSAGE value="final version, go to test" />
     <MESSAGE value="deployment version" />
-    <option name="LAST_COMMIT_MESSAGE" value="deployment version" />
+    <MESSAGE value="fix synchro" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix synchro" />
   </component>
 </project>

@@ -44,7 +44,8 @@ def create_app(config_class=app_config):
                                    change_language_url = change_language_url,
                                    content = render_template("about.html",
                                                              language_cache = Language().get_about(mongo = mongo,
-                                                                                                   language = language))
+                                                                                                   language = language),
+                                                             language=language)
                                    )
         else:
             abort(404)
@@ -63,7 +64,8 @@ def create_app(config_class=app_config):
                                    change_language_url = change_language_url,
                                    content = render_template("about.html",
                                                              language_cache = Language().get_about(mongo = mongo,
-                                                                                                   language = language))
+                                                                                                   language = language),
+                                                             language=language)
                                    )
         else:
             abort(404)

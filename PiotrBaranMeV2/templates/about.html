@@ -1,46 +1,52 @@
-<div class="hero bg-base-200 min-h-screen">
-    <div class="hero-content flex-col lg:flex-row-reverse">
+<div class="hero bg-base-200" style="width:100%;height:100%; display:flex; flex-direction:column; flex-grow:1; margin-bottom:3rem">
+  <div class="hero-content flex-col lg:flex-row-reverse" style="width:100%;height:100%">
+    <div class="md:ml-16">
       <img
-        src="https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378362/portfolio_mqgjom.jpg"
-        class="max-w-sm rounded-full shadow-2xl" />
-      <div>
-        <h1 class="text-5xl font-bold"> {{ language_cache.hero_banner.title }} </h1>
-        <p class="py-6 text-justify">
-          {{ language_cache.hero_banner.description }}
-        </p>
-        <div id="stats-container" class="grid grid-cols-1 content-center gap-4 md:items-start" >
-          <div class="row-span-1 w-full flex md:block justify-center">
-            <div class="stats stats-vertical lg:stats-horizontal shadow">
-              {% for skill in language_cache.hero_banner.achievements_top %}
-              <div class="stat">
-                <div class="stat-figure text-secondary">
-                  {{ language_cache.hero_banner.achievements_top[skill].icon|safe }}
-                </div>
-<!--                <div class="stat-title">{{ language_cache.hero_banner.achievements_top[skill].level }}</div>-->
-                <div class="stat-value">{{ language_cache.hero_banner.achievements_top[skill].skill }}</div>
-                <div class="stat-desc">{{ language_cache.hero_banner.achievements_top[skill].additional_info }}</div>
-              </div>
-              {% endfor %}
+      src="https://res.cloudinary.com/dz3ms2ssv/image/upload/v1741378362/portfolio_mqgjom.jpg"
+      class="sm:max-w-sm rounded-full shadow-2xl" />
+    </div>
+    <div>
+      <h1 class="text-5xl font-bold"> {{ language_cache.hero_banner.title }} </h1>
+      <p class="py-6 text-justify">
+        {{ language_cache.hero_banner.description }}
+      </p>
+      <div id="stats-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center gap-10 ml-4 md:ml-8 lg:ml-12">
+        {% for skill in language_cache.hero_banner.achievements_top %}
+        <div class="self-center">
+          <div class="flex items-center justify-between gap-2">
+            <div class="stat-value">
+              {{ language_cache.hero_banner.achievements_top[skill].skill }}
+            </div>
+            <div class="stat-figure text-secondary">
+              {{ language_cache.hero_banner.achievements_top[skill].icon|safe }}
             </div>
           </div>
-          <div class="row-span-1 w-full flex md:block justify-center">
-            <div class="stats stats-vertical lg:stats-horizontal shadow">
-              {% for skill in language_cache.hero_banner.achievements_bottom %}
-              <div class="stat">
-                <div class="stat-figure text-secondary">
-                  {{ language_cache.hero_banner.achievements_bottom[skill].icon|safe }}
-                </div>
-<!--                <div class="stat-title">{{ language_cache.hero_banner.achievements_bottom[skill].level }}</div>-->
-                <div class="stat-value">{{ language_cache.hero_banner.achievements_bottom[skill].skill }}</div>
-                <div class="stat-desc">{{ language_cache.hero_banner.achievements_bottom[skill].additional_info }}</div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-          <div class="row-span-1 w-full flex md:block justify-center">
-            <a role="button" href="{{ url_for('static', filename=language_cache.hero_banner.resume.file) }}" download="{{language_cache.hero_banner.resume.file}}" class="btn btn-primary"> {{language_cache.hero_banner.resume.name}} </a>
+          <div class="stat-desc text-wrap max-w-xs">
+            {{ language_cache.hero_banner.achievements_top[skill].additional_info }}
           </div>
         </div>
+        {% endfor %}
+        {% for skill in language_cache.hero_banner.achievements_bottom %}
+        <div class=" self-center">
+          <div class="flex items-center justify-between gap-2">
+            <div class="stat-value">
+              {{ language_cache.hero_banner.achievements_bottom[skill].skill }}
+            </div>
+            <div class="stat-figure text-secondary">
+              {{ language_cache.hero_banner.achievements_bottom[skill].icon|safe }}
+            </div>
+          </div>
+          <div class="stat-desc text-wrap max-w-xs">
+            {{ language_cache.hero_banner.achievements_bottom[skill].additional_info }}
+          </div>
+        </div>
+        {% endfor %}
       </div>
+      <div class="row-span-1 w-full flex md:block justify-center" style="margin-top:5%">
+        <a role="button" href="{{ url_for('static', filename=language_cache.hero_banner.resume.file) }}" download="{{language_cache.hero_banner.resume.file}}" class="btn btn-xl btn-primary"> {{language_cache.hero_banner.resume.name}} </a>
+        <a hx-get="/{{language}}/portfolio" hx-target="#main" hx-swap="innerHTML" hx-push-url="true" class="btn btn-xl btn-outline" style="margin-left:4%"> {{language_cache.hero_banner.portfolio.name}} </a>
+      </div>
+
     </div>
   </div>
+</div>

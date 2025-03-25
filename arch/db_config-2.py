@@ -71,7 +71,7 @@ try:
         "name": "about.html",
         "hero_banner": {
             "title": "O mnie!",
-            "description": "Od zawsze odnajdywałem się w świecie cyfrowym, zaczęło się od hobby i pracy inżynierskiej, gdzie napisałem swój pierwszy model. Po studiach trafiłem do działu CRM w jednym z polskich banków, gdzie pracuję do teraz i od tamtej pory, zajmuję się przygotowywaniem procesów ETL, przepływów danych, a także przygotowywania danych do raportowania. W swojej karierze miałem okazję również pisać mikroaplikacje w frameworkach Dash i Flask.",
+            "description": "Od zawsze odnajdywałem się w\u00A0świecie cyfrowym, zaczęło się od hobby\u00A0i\u00A0pracy inżynierskiej, gdzie napisałem swój pierwszy model. Po studiach trafiłem do działu CRM\u00A0w\u00A0jednym\u00A0z\u00A0polskich banków, gdzie pracuję do\u00A0teraz\u00A0i\u00A0od tamtej pory, zajmuję się przygotowywaniem procesów ETL, przepływów danych, a\u00A0także przygotowywania danych do\u00A0raportowania. W\u00A0swojej karierze miałem okazję również pisać mikroaplikacje\u00A0w\u00A0frameworkach Dash\u00A0i\u00A0Flask.",
             "achievements_top": {
                 "1": {
                     "level": "Regular",
