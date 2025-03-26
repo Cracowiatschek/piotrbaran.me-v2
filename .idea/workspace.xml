@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="fix about site, img adjusted to mobile devices, add portfolio button, resize buttons.&#10;fix responsive, on mobile added hamburger menu">
+    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="fix contact.html - contact form, card and sample chat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742907713268</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix contact.html - contact form, card and sample chat">
+      <option name="closed" value="true" />
+      <created>1742987626994</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1742987626994</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,6 +208,7 @@
     <MESSAGE value="final version, go to test" />
     <MESSAGE value="deployment version" />
     <MESSAGE value="fix synchro" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix synchro" />
+    <MESSAGE value="fix contact.html - contact form, card and sample chat" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix contact.html - contact form, card and sample chat" />
   </component>
 </project>

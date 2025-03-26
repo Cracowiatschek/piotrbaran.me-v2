@@ -41,16 +41,16 @@
         <ul
           tabindex="0"
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li><a hx-get="/{{language}}/about" hx-target="#main" hx-swap="innerHTML" hx-push-url="true">{{ language_cache.navbar.about_me }}</a></li>
-          <li><a hx-get="/{{language}}/portfolio" hx-target="#main" hx-swap="innerHTML" hx-push-url="true">{{ language_cache.navbar.portfolio }}</a></li>
-          <li><a hx-get="/{{language}}/contact" hx-target="#main" hx-swap="innerHTML" hx-push-url="true">{{ language_cache.navbar.contact }}</a></li>
+          <li><a hx-get="/{{language}}/about" hx-target="#main" hx-swap="outerHTML" hx-push-url="true">{{ language_cache.navbar.about_me }}</a></li>
+          <li><a hx-get="/{{language}}/portfolio" hx-target="#main" hx-swap="outerHTML" hx-push-url="true">{{ language_cache.navbar.portfolio }}</a></li>
+          <li><a hx-get="/{{language}}/contact" hx-target="#main" hx-swap="outerHTML" hx-push-url="true">{{ language_cache.navbar.contact }}</a></li>
           <li>
             <div class="flex items-center gap-2"> {{ app_cfg.language.pl }}
               {% if language == "pl" %}
               <input hx-get="{{change_language_url}}"
                      hx-trigger="change delay:300ms"
                      hx-target="#main"
-                     hx-swap="innerHTML"
+                     hx-swap="outerHTML"
                      type="checkbox"
                      hx-push-url="true"
                      class="toggle toggle-xs border-gray-500 bg-gray-500 hover:bg-gray-400"/>
@@ -58,7 +58,7 @@
               <input hx-get="{{change_language_url}}"
                      hx-trigger="change delay:300ms"
                      hx-target="#main"
-                     hx-swap="innerHTML"
+                     hx-swap="outerHTML"
                      type="checkbox"
                      hx-push-url="true"
                      checked
@@ -73,16 +73,16 @@
 
     <div class="navbar-end hidden md:flex">
       <ul class="menu menu-horizontal px-1">
-          <li><a hx-get="/{{language}}/about" hx-target="#main" hx-swap="innerHTML" hx-push-url="true">{{ language_cache.navbar.about_me }}</a></li>
-          <li><a hx-get="/{{language}}/portfolio" hx-target="#main" hx-swap="innerHTML" hx-push-url="true">{{ language_cache.navbar.portfolio }}</a></li>
-          <li><a hx-get="/{{language}}/contact" hx-target="#main" hx-swap="innerHTML" hx-push-url="true">{{ language_cache.navbar.contact }}</a></li>
+          <li><a hx-get="/{{language}}/about" hx-target="#main" hx-swap="outerHTML" hx-push-url="true">{{ language_cache.navbar.about_me }}</a></li>
+          <li><a hx-get="/{{language}}/portfolio" hx-target="#main" hx-swap="outerHTML" hx-push-url="true">{{ language_cache.navbar.portfolio }}</a></li>
+          <li><a hx-get="/{{language}}/contact" hx-target="#main" hx-swap="outerHTML" hx-push-url="true">{{ language_cache.navbar.contact }}</a></li>
           <li>
             <div class="flex items-center gap-2"> {{ app_cfg.language.pl }}
               {% if language == "pl" %}
               <input hx-get="{{change_language_url}}"
                      hx-trigger="change delay:300ms"
                      hx-target="#main"
-                     hx-swap="innerHTML"
+                     hx-swap="outerHTML"
                      type="checkbox"
                      hx-push-url="true"
                      class="toggle toggle-xs border-gray-500 bg-gray-500 hover:bg-gray-400"/>
@@ -90,7 +90,7 @@
               <input hx-get="{{change_language_url}}"
                      hx-trigger="change delay:300ms"
                      hx-target="#main"
-                     hx-swap="innerHTML"
+                     hx-swap="outerHTML"
                      type="checkbox"
                      hx-push-url="true"
                      checked
