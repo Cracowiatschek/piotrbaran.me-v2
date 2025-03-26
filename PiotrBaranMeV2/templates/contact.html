@@ -1,6 +1,6 @@
-<div class="min-h-screen">
-	<div class="grid grid-cols-6 gap-4">
-	  <div class="col-span-4 col-start-2">
+<div style="width:100%;height:100%; display:flex; flex-direction:column; flex-grow:1">
+
+	  <div class="mx-20 md: mx-50">
 	    <div class="chat chat-start">
 	      <div class="chat-image avatar">
 	        <div class="w-10 rounded-full">
@@ -46,53 +46,52 @@
 	      <div class="chat-bubble"><span class="loading loading-dots loading-xl"></span></div>
 	    </div>
 	  </div>
-	</div>
 
-	<div style="margin-bottom:3%" class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-7 gap-4">
-	  <div class="col-span-1 md:col-span-2 md:col-start-2 justify-self-center">
-	    <div class="card bg-base-100 w-96 shadow-sm">
-	      <div class="card-body">
-	        <h2 class="card-title">{{language_cache.form.label}}</h2>
-	        <form hx-post="/send-email?language={{language}}" hx-target="#response">
-	          <fieldset class="fieldset w-88 bg-base-200 border border-base-300 p-4 rounded-box">
+	<div class="grid grid-cols-1 m-12 place-center gap-3 md:grid-cols-2 gap-10 mx-45">
+		<div class="card bg-base-100 w-full max-w-screen-xl shadow-sm">
+		  <div class="card-body">
+			<h2 class="card-title">{{language_cache.form.label}}</h2>
+			<form hx-post="/send-email?language={{language}}" hx-target="#response">
+			  <fieldset class="fieldset w-full bg-base-200 border border-base-300 p-4 rounded-box">
 
-	            <label class="fieldset-label">{{language_cache.form.first_name.label}}</label>
-	            <input type="text" required class="input validator" name="first-name" placeholder="{{language_cache.form.first_name.placeholder}}" />
+				<label class="fieldset-label">{{language_cache.form.first_name.label}}</label>
+				<input type="text" required class="input validator w-full" name="first-name" placeholder="{{language_cache.form.first_name.placeholder}}" />
 
-	            <label class="fieldset-label">{{language_cache.form.last_name.label}}</label>
-	            <input type="text" required class="input validator" name="last-name" placeholder="{{language_cache.form.last_name.placeholder}}" />
+				<label class="fieldset-label">{{language_cache.form.last_name.label}}</label>
+				<input type="text" required class="input validator w-full" name="last-name" placeholder="{{language_cache.form.last_name.placeholder}}" />
 
-	            <label class="fieldset-label">{{language_cache.form.email.label}}</label>
-	            <input type="email" required class="input validator" name="email" placeholder="{{language_cache.form.email.placeholder}}" />
+				<label class="fieldset-label">{{language_cache.form.email.label}}</label>
+				<input type="email" required class="input validator w-full" name="email" placeholder="{{language_cache.form.email.placeholder}}" />
 
-	            <label class="fieldset-label">{{language_cache.form.message.label}}</label>
-	            <textarea required class="textarea validator" name="message" placeholder="{{language_cache.form.message.placeholder}}"></textarea>
-	            <input class="btn btn-soft btn-primary" type="submit" value="{{language_cache.form.button}}">
-	          </fieldset>
-	        </form>
-	        <div id="response"></div>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-span-1 md:col-start-5 justify-self-center place-self-center">
-	    <div class="card bg-primary text-primary-content w-96">
-	      <div class="card-body">
-	        <h2 class="card-title">{{language_cache.descriptions.cooperation.title}}</h2>
-	        <ul>
-	          <li><p class="text-wrap">{{language_cache.descriptions.cooperation.description}}</p></li>
-	          <li style="margin-top:5%" class="justify-self-end"><a role="button" href="mailto:kontakt@piotrbaran.me" class="btn btn-secondary">kontakt@piotrbaran.me</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	    <div class="card bg-primary text-primary-content w-96 mt-4">
-	      <div class="card-body">
-	        <h2 class="card-title">{{language_cache.descriptions.resume.title}}</h2>
-	        <ul>
-	          <li><p>{{language_cache.descriptions.resume.description}}</p></li>
-	          <li style="margin-top:5%" class="justify-self-end"><a role="button" href="{{ url_for('static', filename=language_cache.descriptions.resume.button.file) }}" download="{{language_cache.descriptions.resume.button.file}}" class="btn btn-secondary justify-self-end">{{language_cache.descriptions.resume.button.name}}</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </div>
+				<label class="fieldset-label">{{language_cache.form.message.label}}</label>
+				<textarea required class="textarea validator w-full" name="message" placeholder="{{language_cache.form.message.placeholder}}"></textarea>
+
+				<input class="btn btn-soft btn-primary w-full" type="submit" value="{{language_cache.form.button}}">
+			  </fieldset>
+			</form>
+			<div id="response"></div>
+		  </div>
+		</div>
+		<div class="self-center">
+			<div class="card bg-primary text-primary-content w-full max-w-screen-xl">
+			  <div class="card-body">
+				<h2 class="card-title">{{language_cache.descriptions.cooperation.title}}</h2>
+				<ul>
+				  <li><p class="text-wrap">{{language_cache.descriptions.cooperation.description}}</p></li>
+				  <li style="margin-top:5%" class="justify-self-end"><a role="button" href="mailto:kontakt@piotrbaran.me" class="btn btn-secondary">kontakt@piotrbaran.me</a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="card bg-primary text-primary-content mt-10 w-full max-w-screen-xl">
+			  <div class="card-body">
+				<h2 class="card-title">{{language_cache.descriptions.resume.title}}</h2>
+				<ul>
+				  <li><p>{{language_cache.descriptions.resume.description}}</p></li>
+				  <li style="margin-top:5%" class="justify-self-end"><a role="button" href="{{ url_for('static', filename=language_cache.descriptions.resume.button.file) }}" download="{{language_cache.descriptions.resume.button.file}}" class="btn btn-secondary justify-self-end">{{language_cache.descriptions.resume.button.name}}</a></li>
+				</ul>
+			  </div>
+			</div>
+		</div>
 	</div>
 </div>
+

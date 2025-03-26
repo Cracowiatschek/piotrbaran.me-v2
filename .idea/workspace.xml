@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="deployment version">
-      <change afterPath="$PROJECT_DIR$/arch/db_config-2.py" afterDir="false" />
+    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="fix about site, img adjusted to mobile devices, add portfolio button, resize buttons.&#10;fix responsive, on mobile added hamburger menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arch/db_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/arch/db_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/contact.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "development",
+    "git-widget-placeholder": "fix-contact",
     "last_opened_file_path": "C:/Users/piotr/PycharmProjects/piotrbaranMeV2/arch"
   }
 }]]></component>
@@ -172,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741640147389</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix about site, img adjusted to mobile devices, add portfolio button, resize buttons.&#10;fix responsive, on mobile added hamburger menu">
+      <option name="closed" value="true" />
+      <created>1742907713268</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1742907713268</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
