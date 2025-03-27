@@ -1,17 +1,17 @@
 <div style="margin-left: 5%; margin-right: 5%; margin-bottom: 5%" class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 gap-10 min-h-screen">
     {% for component in language_cache.components %}
-      <div class="card lg:card-side bg-base-100 shadow-sm flex flex-col lg:flex-row">
-        <figure class="w-full lg:w-1/2  aspect-[1/1]">
+      <div class="card xl:card-side bg-base-100 shadow-sm flex flex-col xl:flex-row">
+        <figure class="w-full xl:w-1/2  aspect-[1/1]">
           <img
             class="object-cover w-full h-full"
             src="{{language_cache.components[component].img}}"
             alt="{{language_cache.components[component].name}}" />
         </figure>
-        <div class="card-body w-full lg:w-1/2">
-          <h2 class="card-title">{{language_cache.components[component].name}}</h2>
-          <p class="text-wrap">{{language_cache.components[component].description}}</p>
+        <div class="card-body w-full xl:w-1/2">
+          <h2 class="card-title text-2xl md:text-3xl">{{language_cache.components[component].name}}</h2>
+          <p class="text-wrap md:text-base ">{{language_cache.components[component].description}}</p>
           <div class="card-actions justify-end">
-            <button hx-get="{{language_cache.components[component].button.url}}" hx-target="#tech-content" hx-push-url="true" class="btn btn-primary">
+            <button hx-get="{{language_cache.components[component].button.url}}" hx-target="#tech-content" hx-push-url="true" class="btn btn-primary mt-5 xl:mt-0 md:btn-lg">
               {{language_cache.components[component].button.name}}
             </button>
           </div>
