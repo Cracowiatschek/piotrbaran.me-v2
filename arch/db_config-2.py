@@ -219,7 +219,7 @@ try:
             },
             "buttons": {
                 "1": {
-                    "btn":"<a role=\"button\" href=\"https://github.com/Cracowiatschek/DictionaryApp\" target=\"_blank\" class=\"btn btn-primary\">Więcej</a>"
+                    "btn":"<a role=\"button\" href=\"https://github.com/Cracowiatschek/DictionaryApp\" target=\"_blank\" class=\"btn btn-primary btn-lg mt-5 md:mt-10 xl:mt-0 md:btn-xl\">Więcej</a>"
                 }
             }
         },
@@ -264,10 +264,10 @@ try:
             },
             "buttons": {
                 "1": {
-                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine\" target=\"_blank\" class=\"btn btn-primary\">Więcej</a>"
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine\" target=\"_blank\" class=\"btn btn-primary btn-lg mt-5 md:mt-10 xl:mt-0 md:btn-xl\">Więcej</a>"
                 },
                 "2": {
-                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine/wiki\" target=\"_blank\" class=\"btn btn-primary\">Dokumentacja</a>"
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine/wiki\" target=\"_blank\" class=\"btn btn-primary btn-lg mt-5 md:mt-10 xl:mt-0 md:btn-xl\">Dokumentacja</a>"
                 }
             }
         },
@@ -297,7 +297,7 @@ try:
             },
             "buttons": {
                 "1": {
-                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/Thesis_project\" target=\"_blank\" class=\"btn btn-primary\">Więcej</a>"
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/Thesis_project\" target=\"_blank\" class=\"btn btn-primary btn-lg mt-5 md:mt-10 xl:mt-0 md:btn-xl\">Więcej</a>"
                 }
             }
         },
@@ -346,7 +346,7 @@ try:
             },
             "buttons": {
                 "1": {
-                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS_Autoamtion\" target=\"_blank\" class=\"btn btn-primary\">Więcej</a>"
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS_Autoamtion\" target=\"_blank\" class=\"btn btn-primary btn-lg mt-5 md:mt-10 xl:mt-0 md:btn-xl\">Więcej</a>"
                 }
             }
         },
@@ -552,7 +552,7 @@ try:
             },
             "buttons": {
                 "1": {
-                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/DictionaryApp\" target=\"_blank\" class=\"btn btn-primary\">More</a>"
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/DictionaryApp\" target=\"_blank\" class=\"btn btn-primary btn-lg mt-5 md:mt-10 xl:mt-0 md:btn-xl\">More</a>"
                 }
             }
         },
@@ -597,7 +597,7 @@ try:
             },
             "buttons": {
                 "1": {
-                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine\" target=\"_blank\" class=\"btn btn-primary\">More</a>"
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine\" target=\"_blank\" class=\"btn btn-primary btn-lg mt-5 md:mt-10 xl:mt-0 md:btn-xl\">More</a>"
                 },
                 "2": {
                     "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS-Rules-Engine/wiki\" target=\"_blank\" class=\"btn btn-primary\">Docs</a>"
@@ -630,7 +630,7 @@ try:
             },
             "buttons": {
                 "1": {
-                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/Thesis_project\" target=\"_blank\" class=\"btn btn-primary\">More</a>"
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/Thesis_project\" target=\"_blank\" class=\"btn btn-primary btn-lg mt-5 md:mt-10 xl:mt-0 md:btn-xl\">More</a>"
                 }
             }
         },
@@ -679,7 +679,7 @@ try:
             },
             "buttons": {
                 "1": {
-                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS_Autoamtion\" target=\"_blank\" class=\"btn btn-primary\">More</a>"
+                    "btn": "<a role=\"button\" href=\"https://github.com/Cracowiatschek/SAS_Autoamtion\" target=\"_blank\" class=\"btn btn-primary btn-lg mt-5 md:mt-10 xl:mt-0 md:btn-xl\">More</a>"
                 }
             }
         },
