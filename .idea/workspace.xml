@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="fix contact.html - contact form, card and sample chat">
+    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="fix base.html -bug double main section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/contact.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,25 +45,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python tests.Python tests in conftest.py.executor": "Run",
-    "Python.app.executor": "Run",
-    "Python.base_config.executor": "Run",
-    "Python.db_config-2.executor": "Run",
-    "Python.db_config.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.temp.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.time.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "fix-contact",
-    "last_opened_file_path": "C:/Users/piotr/PycharmProjects/piotrbaranMeV2/arch"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.contact.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in conftest.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.base_config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.db_config-2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.db_config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.temp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.time.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fix-contact&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/piotr/PycharmProjects/piotrbaranMeV2&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\piotr\PycharmProjects\piotrbaranMeV2\arch" />
@@ -95,6 +99,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1739989502924</updated>
+      <workItem from="1743029237846" duration="179000" />
+      <workItem from="1743029426622" duration="51000" />
+      <workItem from="1743089781686" duration="158000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -184,8 +191,19 @@
       <option name="project" value="LOCAL" />
       <updated>1742987626994</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix base.html -bug double main section">
+      <option name="closed" value="true" />
+      <created>1742988069011</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742988069011</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -209,6 +227,7 @@
     <MESSAGE value="deployment version" />
     <MESSAGE value="fix synchro" />
     <MESSAGE value="fix contact.html - contact form, card and sample chat" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix contact.html - contact form, card and sample chat" />
+    <MESSAGE value="fix base.html -bug double main section" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix base.html -bug double main section" />
   </component>
 </project>

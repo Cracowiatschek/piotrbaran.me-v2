@@ -47,8 +47,8 @@
 	    </div>
 	  </div>
 
-	<div class="grid grid-cols-1 m-12 place-center gap-3 md:grid-cols-2 gap-10 mx-45">
-		<div class="card bg-base-100 w-full max-w-screen-xl shadow-sm">
+	<div class="grid grid-cols-1 m-12 place-center gap-3 lg:grid-cols-2 gap-10 mx-45">
+		<div class="card card-lg bg-base-100 w-full max-w-screen-xl shadow-sm">
 		  <div class="card-body">
 			<h2 class="card-title">{{language_cache.form.label}}</h2>
 			<form hx-post="/send-email?language={{language}}" hx-target="#response">
@@ -66,28 +66,28 @@
 				<label class="fieldset-label">{{language_cache.form.message.label}}</label>
 				<textarea required class="textarea validator w-full" name="message" placeholder="{{language_cache.form.message.placeholder}}"></textarea>
 
-				<input class="btn btn-soft btn-primary w-full" type="submit" value="{{language_cache.form.button}}">
+				<input class="btn btn-soft btn-primary btn-xl w-full" type="submit" value="{{language_cache.form.button}}">
 			  </fieldset>
 			</form>
 			<div id="response"></div>
 		  </div>
 		</div>
 		<div class="self-center">
-			<div class="card bg-primary text-primary-content w-full max-w-screen-xl">
+			<div class="card card-lg bg-primary text-primary-content w-full max-w-screen-xl">
 			  <div class="card-body">
 				<h2 class="card-title">{{language_cache.descriptions.cooperation.title}}</h2>
 				<ul>
 				  <li><p class="text-wrap">{{language_cache.descriptions.cooperation.description}}</p></li>
-				  <li style="margin-top:5%" class="justify-self-end"><a role="button" href="mailto:kontakt@piotrbaran.me" class="btn btn-secondary">kontakt@piotrbaran.me</a></li>
+				  <li style="margin-top:5%" class="justify-self-end"><a role="button" href="mailto:kontakt@piotrbaran.me" class="btn btn-secondary lg:btn-lg">kontakt@piotrbaran.me</a></li>
 				</ul>
 			  </div>
 			</div>
-			<div class="card bg-primary text-primary-content mt-10 w-full max-w-screen-xl">
+			<div class="card card-lg bg-primary text-primary-content mt-10 w-full max-w-screen-xl">
 			  <div class="card-body">
 				<h2 class="card-title">{{language_cache.descriptions.resume.title}}</h2>
 				<ul>
 				  <li><p>{{language_cache.descriptions.resume.description}}</p></li>
-				  <li style="margin-top:5%" class="justify-self-end"><a role="button" href="{{ url_for('static', filename=language_cache.descriptions.resume.button.file) }}" download="{{language_cache.descriptions.resume.button.file}}" class="btn btn-secondary justify-self-end">{{language_cache.descriptions.resume.button.name}}</a></li>
+				  <li style="margin-top:5%" class="justify-self-end"><a role="button" href="{{ url_for('static', filename=language_cache.descriptions.resume.button.file) }}" download="{{language_cache.descriptions.resume.button.file}}" class="btn btn-secondary lg:btn-lg">{{language_cache.descriptions.resume.button.name}}</a></li>
 				</ul>
 			  </div>
 			</div>
