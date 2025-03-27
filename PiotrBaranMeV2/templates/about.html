@@ -6,13 +6,13 @@
       class="sm:max-w-sm rounded-full shadow-2xl" />
     </div>
     <div>
-      <h1 class="text-5xl font-bold"> {{ language_cache.hero_banner.title }} </h1>
-      <p class="py-6 text-justify">
+      <h1 class="text-5xl font-bold mx-5"> {{ language_cache.hero_banner.title }} </h1>
+      <p class="py-6 text-justify mx-5">
         {{ language_cache.hero_banner.description }}
       </p>
       <div id="stats-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center gap-10 ml-4 md:ml-8 lg:ml-12">
         {% for skill in language_cache.hero_banner.achievements_top %}
-        <div class="self-center">
+        <div class="self-center mx-3 lg:mx-0" >
           <div class="flex items-center justify-between gap-2">
             <div class="stat-value">
               {{ language_cache.hero_banner.achievements_top[skill].skill }}
@@ -27,7 +27,7 @@
         </div>
         {% endfor %}
         {% for skill in language_cache.hero_banner.achievements_bottom %}
-        <div class=" self-center">
+        <div class="self-center mx-3 lg:mx-0">
           <div class="flex items-center justify-between gap-2">
             <div class="stat-value">
               {{ language_cache.hero_banner.achievements_bottom[skill].skill }}
@@ -42,9 +42,9 @@
         </div>
         {% endfor %}
       </div>
-      <div class="row-span-1 w-full flex md:block justify-center" style="margin-top:5%">
-        <a role="button" href="{{ url_for('static', filename=language_cache.hero_banner.resume.file) }}" download="{{language_cache.hero_banner.resume.file}}" class="btn btn-xl btn-primary"> {{language_cache.hero_banner.resume.name}} </a>
-        <a hx-get="/{{language}}/portfolio" hx-target="#main" hx-swap="innerHTML" hx-push-url="true" class="btn btn-xl btn-outline" style="margin-left:4%"> {{language_cache.hero_banner.portfolio.name}} </a>
+      <div class="row-span-1 w-full flex md:block justify-center mt-[10%] md:mt-[5%] md:ml-5">
+        <a role="button" href="{{ url_for('static', filename=language_cache.hero_banner.resume.file) }}" download="{{language_cache.hero_banner.resume.file}}" class="btn btn-lg md:btn-xl btn-primary"> {{language_cache.hero_banner.resume.name}} </a>
+        <a hx-get="/{{language}}/portfolio" hx-target="#main" hx-swap="innerHTML" hx-push-url="true" class="btn btn-lg md:btn-xl btn-outline" style="margin-left:4%"> {{language_cache.hero_banner.portfolio.name}} </a>
       </div>
 
     </div>
