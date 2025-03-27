@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="fix base.html -bug double main section">
+    <list default="true" id="32f658e2-d09b-426e-abe2-fc0e686389f8" name="Changes" comment="fix base.html -bug double main section, remove pt-16 from app-content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PiotrBaranMeV2/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/PiotrBaranMeV2/templates/contact.html" afterDir="false" />
     </list>
@@ -199,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742988069011</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix base.html -bug double main section, remove pt-16 from app-content">
+      <option name="closed" value="true" />
+      <created>1743090669327</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1743090669327</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +236,7 @@
     <MESSAGE value="fix synchro" />
     <MESSAGE value="fix contact.html - contact form, card and sample chat" />
     <MESSAGE value="fix base.html -bug double main section" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix base.html -bug double main section" />
+    <MESSAGE value="fix base.html -bug double main section, remove pt-16 from app-content" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix base.html -bug double main section, remove pt-16 from app-content" />
   </component>
 </project>
